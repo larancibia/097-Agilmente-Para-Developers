@@ -1,0 +1,22 @@
+\babel@toc {nil}{}\relax 
+\contentsline {chapter}{Introducción: El Día Que Todo Cambió}{1}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}El Bug en Tu Cerebro}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}El descubrimiento que cambió todo}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Tu cerebro no es una computadora}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Las cinco tareas simultáneas del programador}{2}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}1. Comprender sintaxis}{2}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}2. Mantener el contexto en memoria de trabajo}{2}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}3. Construir modelos mentales}{3}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}4. Resolver problemas}{3}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}5. Planificar y ejecutar}{3}{subsection.1.3.5}%
+\contentsline {section}{\numberline {1.4}Tres cosas que puedes hacer hoy}{3}{section.1.4}%
+\contentsline {chapter}{\numberline {2}El Mito del Multitasking}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Tu Cerebro en Flow}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}El Poder del Descanso}{6}{chapter.4}%
+\contentsline {chapter}{\numberline {5}IA: Tu Copiloto, No Tu Piloto}{7}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Programar como un Estoico}{8}{chapter.6}%
+\contentsline {chapter}{\numberline {7}El Código Simple Gana}{9}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Empieza Hoy}{10}{chapter.8}%
+\contentsline {chapter}{Epílogo}{11}{chapter*.3}%
+\contentsline {chapter}{Referencias y Estudios Citados}{12}{chapter*.4}%
+\contentsline {chapter}{Sobre el Autor}{14}{chapter*.5}%

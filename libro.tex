@@ -1,0 +1,382 @@
+\documentclass[11pt,openany]{book}
+
+% ============================================
+% PACKAGES
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+
+% ============================================
+% PAGE GEOMETRY (Trade paperback size)
+% ============================================
+\geometry{
+    paperwidth=6in,
+    paperheight=9in,
+    top=0.75in,
+    bottom=0.75in,
+    inner=0.75in,
+    outer=0.5in
+}
+
+% ============================================
+% TYPOGRAPHY
+% ============================================
+\usepackage{charter} % Professional serif font
+\usepackage[scaled=0.95]{helvet} % Sans-serif for headings
+\renewcommand{\familydefault}{\rmdefault}
+
+% Line spacing
+\setstretch{1.25}
+
+% Paragraph settings
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+% Microtype for better text
+\microtypesetup{
+    activate={true,nocompatibility},
+    final,
+    tracking=true,
+    factor=1100,
+    stretch=10,
+    shrink=10
+}
+
+% ============================================
+% COLORS
+% ============================================
+\definecolor{chaptercolor}{RGB}{41,128,185}  % Professional blue
+\definecolor{sectioncolor}{RGB}{52,73,94}    % Dark gray
+\definecolor{codebackground}{RGB}{245,245,245}
+\definecolor{linkcolor}{RGB}{41,128,185}
+
+% ============================================
+% CHAPTER & SECTION FORMATTING
+% ============================================
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\sffamily\color{chaptercolor}}
+{\chaptertitlename\ \thechapter}
+{20pt}
+{\Huge}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries\sffamily\color{sectioncolor}}
+{\thesection}
+{1em}
+{}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries\sffamily\color{sectioncolor}}
+{\thesubsection}
+{1em}
+{}
+
+% ============================================
+% HEADERS & FOOTERS
+% ============================================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{\leftmark}}
+\fancyhead[LO]{\textit{\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Plain style for chapter pages
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+% ============================================
+% CODE LISTINGS
+% ============================================
+\lstset{
+    basicstyle=\small\ttfamily,
+    backgroundcolor=\color{codebackground},
+    frame=single,
+    rulecolor=\color{sectioncolor},
+    breaklines=true,
+    breakatwhitespace=true,
+    numbers=none,
+    xleftmargin=0.5cm,
+    xrightmargin=0.5cm,
+    aboveskip=1em,
+    belowskip=1em
+}
+
+% ============================================
+% HYPERLINKS
+% ============================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=linkcolor,
+    bookmarksopen=true,
+    pdfstartview=FitH
+}
+
+% ============================================
+% CUSTOM BOXES FOR TIPS/NOTES
+% ============================================
+\newtcolorbox{tipbox}[1][]{
+    colback=codebackground,
+    colframe=chaptercolor,
+    fonttitle=\bfseries\sffamily,
+    title={#1},
+    arc=2mm,
+    boxrule=1pt
+}
+
+% ============================================
+% LIST FORMATTING
+% ============================================
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=0.5em}
+\setlist[enumerate]{leftmargin=*,noitemsep,topsep=0.5em}
+
+% ============================================
+% DOCUMENT METADATA
+% ============================================
+\title{Agilmente para Developers}
+\author{[Tu Nombre]}
+\date{\today}
+
+% ============================================
+% BEGIN DOCUMENT
+% ============================================
+\begin{document}
+
+% ============================================
+% FRONT MATTER
+% ============================================
+\frontmatter
+
+% Title Page
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+
+    {\Huge\bfseries\sffamily\color{chaptercolor} AGILMENTE\\PARA DEVELOPERS\par}
+
+    \vspace{1.5cm}
+
+    {\Large\sffamily Productividad, Flow y Código Brillante\\Sin Quemarte en el Intento\par}
+
+    \vspace{3cm}
+
+    {\Large\itshape [Tu Nombre]\par}
+
+    \vfill
+
+    {\large \today\par}
+\end{titlepage}
+
+% Copyright Page
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+    \textbf{Agilmente para Developers}\\
+    Productividad, Flow y Código Brillante Sin Quemarte en el Intento\\[1em]
+
+    Copyright \copyright\ 2025 [Tu Nombre]\\[1em]
+
+    Todos los derechos reservados.\\[1em]
+
+    Ninguna parte de este libro puede ser reproducida, almacenada en un sistema\\
+    de recuperación o transmitida de ninguna forma o por ningún medio,\\
+    electrónico, mecánico, fotocopia, grabación u otro,\\
+    sin el permiso previo por escrito del autor.\\[2em]
+
+    Primera Edición, 2025\\[1em]
+
+    ISBN: [Tu ISBN]\\[2em]
+
+    \textit{Generado con \LaTeX}
+\end{center}
+\vspace*{\fill}
+
+% Dedication (optional)
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+    \textit{Para todos los developers que alguna vez pensaron\\
+    que trabajar más horas era la solución.\\[1em]
+    No lo es.\\[1em]
+    Este libro es tu permiso para trabajar diferente.}
+\end{center}
+\vspace*{\fill}
+
+% Table of Contents
+\tableofcontents
+
+% ============================================
+% MAIN MATTER
+% ============================================
+\mainmatter
+
+% ============================================
+% INTRODUCCIÓN
+% ============================================
+\chapter*{Introducción: El Día Que Todo Cambió}
+\addcontentsline{toc}{chapter}{Introducción: El Día Que Todo Cambió}
+
+Estaba sentado frente a mi laptop a las 11 de la noche, por quinto día consecutivo. Mis ojos ardían. Mi espalda dolía. Había estado ``trabajando'' 12 horas, pero cuando revisé qué había logrado, la respuesta era deprimente: casi nada.
+
+[...]
+
+% ============================================
+% CHAPTER 1
+% ============================================
+\chapter{El Bug en Tu Cerebro}
+
+Era martes. Las 3 de la tarde. Llevaba seis horas sentado frente a la pantalla y no había avanzado nada. NADA. [...]
+
+\section{El descubrimiento que cambió todo}
+
+Dos años después de esa tarde horrible, leí un paper que me voló la cabeza. [...]
+
+\section{Tu cerebro no es una computadora}
+
+Durante años me comparé con mi laptop. [...]
+
+\section{Las cinco tareas simultáneas del programador}
+
+Volvamos al estudio de Siegmund. [...]
+
+\subsection{1. Comprender sintaxis}
+\subsection{2. Mantener el contexto en memoria de trabajo}
+\subsection{3. Construir modelos mentales}
+\subsection{4. Resolver problemas}
+\subsection{5. Planificar y ejecutar}
+
+\section{Tres cosas que puedes hacer hoy}
+
+\begin{tipbox}[Acción Inmediata]
+\textbf{1. Mide tu energía cognitiva}\\
+Durante una semana, cada dos horas pregúntate: ``Del 1 al 10, ¿cuánta energía mental tengo?''
+
+\textbf{2. Respeta el límite de 90 minutos}\\
+Tu cerebro trabaja en ciclos ultradianos de 90-120 minutos.
+
+\textbf{3. Externaliza tu memoria de trabajo}\\
+Antes de abrir el IDE, tomá un papel y escribí: ``¿Qué voy a hacer?''
+\end{tipbox}
+
+% ============================================
+% CHAPTER 2
+% ============================================
+\chapter{El Mito del Multitasking}
+
+[Contenido del capítulo...]
+
+% ============================================
+% CHAPTER 3
+% ============================================
+\chapter{Tu Cerebro en Flow}
+
+[Contenido del capítulo...]
+
+% ============================================
+% CHAPTER 4
+% ============================================
+\chapter{El Poder del Descanso}
+
+[Contenido del capítulo...]
+
+% ============================================
+% CHAPTER 5
+% ============================================
+\chapter{IA: Tu Copiloto, No Tu Piloto}
+
+[Contenido del capítulo...]
+
+% ============================================
+% CHAPTER 6
+% ============================================
+\chapter{Programar como un Estoico}
+
+[Contenido del capítulo...]
+
+% ============================================
+% CHAPTER 7
+% ============================================
+\chapter{El Código Simple Gana}
+
+[Contenido del capítulo...]
+
+% ============================================
+% CHAPTER 8
+% ============================================
+\chapter{Empieza Hoy}
+
+[Contenido del capítulo...]
+
+% ============================================
+% EPILOGUE
+% ============================================
+\chapter*{Epílogo: El Desarrollador que Fuiste, el Desarrollador que Eres, el Desarrollador que Serás}
+\addcontentsline{toc}{chapter}{Epílogo}
+
+Cuando empezaste a programar, probablemente creías que ser buen developer era sobre conocer más sintaxis, más frameworks, más patrones. [...]
+
+% ============================================
+% BACK MATTER
+% ============================================
+\backmatter
+
+% ============================================
+% BIBLIOGRAPHY (optional)
+% ============================================
+\chapter*{Referencias y Estudios Citados}
+\addcontentsline{toc}{chapter}{Referencias y Estudios Citados}
+
+\begin{itemize}
+    \item Siegmund, J., et al. (2014). ``Understanding Understanding Source Code with Functional Magnetic Resonance Imaging.'' Proceedings of ICSE.
+
+    \item Nass, C., et al. (2009). ``Cognitive Control in Media Multitaskers.'' Stanford University, PNAS.
+
+    \item Mark, G., et al. (2008). ``The Cost of Interrupted Work: More Speed and Stress.'' CHI 2008, University of California, Irvine.
+
+    \item Leroy, S. (2009). ``Why is it so hard to do my work? The challenge of attention residue when switching between work tasks.'' Organizational Behavior and Human Decision Processes.
+
+    \item Csikszentmihalyi, M. (1990). ``Flow: The Psychology of Optimal Experience.'' Harper \& Row.
+
+    \item McKinsey \& Company (2014). ``Increasing the 'meaning quotient' of work.'' McKinsey Quarterly.
+
+    \item Microsoft Japan (2019). ``Work-Life Choice Challenge Summer 2019.'' Microsoft Corporation.
+
+    \item Walker, M. (2017). ``Why We Sleep: Unlocking the Power of Sleep and Dreams.'' Scribner.
+
+    \item GitHub (2022). ``Research: Quantifying GitHub Copilot's impact on developer productivity and happiness.'' GitHub Blog.
+
+    \item Peng, S., et al. (2023). ``Do Users Write More Insecure Code with AI Assistants?'' Stanford University.
+
+    \item Brooks, F. (1987). ``No Silver Bullet—Essence and Accident in Software Engineering.'' IEEE Computer.
+\end{itemize}
+
+% ============================================
+% ABOUT THE AUTHOR (optional)
+% ============================================
+\chapter*{Sobre el Autor}
+\addcontentsline{toc}{chapter}{Sobre el Autor}
+
+[Tu biografía aquí]
+
+\end{document}
